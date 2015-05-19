@@ -1,3 +1,9 @@
 {
-  "name" : "phmlabs/Base"
+ "package": {
+                "name": "phmLabs/Base",
+                "version": "1.0.0",
+                "source": {
+                    "url": "https://github.com/phmLabs/Base.git",
+                    "type": "git",
+                }
 }
