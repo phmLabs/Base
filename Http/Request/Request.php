@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Http\Request;
+namespace phmLabs\Base\Http\Request;
 
 use Base\Security\Credentials;
 

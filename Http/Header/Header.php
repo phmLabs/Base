@@ -1,5 +1,5 @@
 <?php
-namespace Base\Http\Header;
+namespace phmLabs\Base\Http\Header;
 
 class Header
 {

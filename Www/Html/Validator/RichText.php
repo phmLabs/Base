@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Base\Www\Html\Validator;
+namespace phmLabs\Base\Www\Html\Validator;
 
 use Base\Www\Uri;
 

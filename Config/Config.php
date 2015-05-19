@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Config;
+namespace phmLabs\Base\Config;
 
 interface Config
 {

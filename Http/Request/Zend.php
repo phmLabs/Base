@@ -3,7 +3,7 @@
  * @version $Id: Zend.php 1373 2013-05-08 14:33:00Z schoe37 $
  */
 
-namespace Base\Http\Request;
+namespace phmLabs\Base\Http\Request;
 
 use Zend\Http\Request as ZendRequest;
 

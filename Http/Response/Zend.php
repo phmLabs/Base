@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Http\Response;
+namespace phmLabs\Base\Http\Response;
 
 use Base\Http\Header\Header;
 use Zend\Http\Response as ZendResponse;

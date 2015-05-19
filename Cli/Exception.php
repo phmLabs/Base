@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Cli;
+namespace phmLabs\Base\Cli;
 
 class Exception extends \Exception
 {

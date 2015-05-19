@@ -1,5 +1,5 @@
 <?php
-namespace Base\File;
+namespace phmLabs\Base\File;
 
 /**
  *

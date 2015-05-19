@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\String;
+namespace phmLabs\Base\String;
 
 abstract class Manipulator
 {

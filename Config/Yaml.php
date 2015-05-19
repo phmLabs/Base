@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Config;
+namespace phmLabs\Base\Config;
 
 use Symfony\Component\Yaml\Yaml as SymfonyYaml;
 use Zend\Config\Config as ZendConfig;

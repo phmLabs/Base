@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Security;
+namespace phmLabs\Base\Security;
 
 class Credentials
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Http;
+namespace phmLabs\Base\Http;
 
 use Base\Http\Request\Request;
 use Base\Http\Response\Response;

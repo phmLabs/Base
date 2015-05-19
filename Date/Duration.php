@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Date;
+namespace phmLabs\Base\Date;
 
 class Duration
 {

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Base\Www\Html;
+namespace phmLabs\Base\Www\Html;
 
 use Base\Www\Html\Document;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\File;
+namespace phmLabs\Base\File;
 
 class Exception extends \Exception
 {

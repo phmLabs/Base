@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Collection;
+namespace phmLabs\Base\Collection;
 
 class Set implements \Iterator, \Countable
 {

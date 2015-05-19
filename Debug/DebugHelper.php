@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Debug;
+namespace phmLabs\Base\Debug;
 
 abstract class DebugHelper
 {

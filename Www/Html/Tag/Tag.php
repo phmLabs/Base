@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Www\Html\Tag;
+namespace phmLabs\Base\Www\Html\Tag;
 
 interface Tag
 {

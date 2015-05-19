@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Http\Response;
+namespace phmLabs\Base\Http\Response;
 
 interface Response
 {

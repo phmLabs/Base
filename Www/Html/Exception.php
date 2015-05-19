@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Www\Html;
+namespace phmLabs\Base\Www\Html;
 
 class Exception extends \Exception
 {

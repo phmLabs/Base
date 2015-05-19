@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Http\Client;
+namespace phmLabs\Base\Http\Client;
 
 use Base\Http\Request\Request;
 use Base\Timer\Timer;

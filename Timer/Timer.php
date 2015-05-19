@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\Timer;
+namespace phmLabs\Base\Timer;
 
 class Timer
 {

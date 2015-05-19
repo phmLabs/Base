@@ -1,5 +1,5 @@
 <?php
-namespace Base\Www;
+namespace phmLabs\Base\Www;
 use Zend\Validate\Callback;
 
 class Uri

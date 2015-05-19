@@ -1,6 +1,6 @@
 <?php
 
-namespace Base\ArrayLists;
+namespace phmLabs\Base\ArrayLists;
 
 class Recursive
 {
