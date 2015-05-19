@@ -1,5 +1,6 @@
 {
-    "name": "phmLabs/Base",
+    "name": "phmlabs/base",
+    "version": "1.0.0",
     "type": "library",
     "description": "phmLabs basic library",
     "keywords": [],
