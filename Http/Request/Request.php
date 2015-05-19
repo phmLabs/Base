@@ -2,7 +2,7 @@
 
 namespace phmLabs\Base\Http\Request;
 
-use Base\Security\Credentials;
+use PhmLabs\Base\Security\Credentials;
 
 interface Request
 {

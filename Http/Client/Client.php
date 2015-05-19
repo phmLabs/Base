@@ -9,9 +9,9 @@
 
 namespace phmLabs\Base\Http\Client;
 
-use Base\Security\Credentials;
+use PhmLabs\Base\Security\Credentials;
 
-use Base\Http\Request\Request;
+use PhmLabs\Base\Http\Request\Request;
 
 interface Client
 {

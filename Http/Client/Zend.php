@@ -2,10 +2,10 @@
 
 namespace phmLabs\Base\Http\Client;
 
-use Base\Http\Request\Request;
-use Base\Timer\Timer;
+use PhmLabs\Base\Http\Request\Request;
+use PhmLabs\Base\Timer\Timer;
 use Zend\Http\Client as ZendClient;
-use Base\Security\Credentials;
+use PhmLabs\Base\Security\Credentials;
 
 class Zend extends ZendClient implements Client
 {

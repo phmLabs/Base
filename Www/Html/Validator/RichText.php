@@ -9,15 +9,15 @@
 
 namespace phmLabs\Base\Www\Html\Validator;
 
-use Base\Www\Uri;
+use PhmLabs\Base\Www\Uri;
 
 use Symfony\Component\HttpFoundation\Request;
 
 use LiveTest\Connection\Request\Symfony;
 
-use Base\Www\Html\Validator;
-use Base\Www\Html\Document;
-use Base\Http\Client\Client;
+use PhmLabs\Base\Www\Html\Validator;
+use PhmLabs\Base\Www\Html\Document;
+use PhmLabs\Base\Http\Client\Client;
 
 /**
  *

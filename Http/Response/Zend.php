@@ -2,7 +2,7 @@
 
 namespace phmLabs\Base\Http\Response;
 
-use Base\Http\Header\Header;
+use PhmLabs\Base\Http\Header\Header;
 use Zend\Http\Response as ZendResponse;
 
 /**

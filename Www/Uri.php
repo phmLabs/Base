@@ -1,5 +1,6 @@
 <?php
 namespace phmLabs\Base\Www;
+
 use Zend\Validate\Callback;
 
 class Uri
@@ -40,6 +41,10 @@ class Uri
      */
     public static function isValid($uriString)
     {
+        if (strpos(strtolower($uriString), 'javascript:') === 0) {
+            return false;
+        }
+
         /**
          *
          * @todo : Check if Zend_Validator_Callback can do the same.
@@ -96,9 +101,9 @@ class Uri
             $uri = $uriString;
         } elseif (strpos($uriString, '//') === 0) {
             // url string gives no protocol, which means the same protocol as current page should be used
-            $uri = $this->getProtocol().":".$uriString;
+            $uri = $this->getProtocol() . ":" . $uriString;
         } elseif (strpos($uriString, '/') === 0) {
-            // uri string is relative to base uri
+            // uri string is absolute to base uri
             $uri = $this->concatUriTerms($this->getDomain(), $uriString);
         } else {
             // uri string is relative to current path
@@ -137,7 +142,6 @@ class Uri
      */
     private function concatUriTerms($firstTerm, $secondTerm)
     {
-
         // two slahes (leading and trailing)
         if ((substr($firstTerm, strlen($firstTerm) - 1) == "/") && (strpos($secondTerm, "/") === 0)) {
             $result = $firstTerm . substr($secondTerm, 1);
@@ -182,21 +186,21 @@ class Uri
 
         return $this->uri;
     }
-    
+
     /**
      * retrieve appropriate protocol or scheme (e.g. http:)
      * Note: Colon has to be added on receiving end to construct a valid url
-     * 
+     *
      * @return String $scheme
      */
-    public function getProtocol() 
+    public function getProtocol()
     {
-      $parsedUri = parse_url($this->uri);
-      $scheme = "";
-      if (array_key_exists('scheme', $parsedUri)) {
-        $scheme = $parsedUri['scheme'];
-      }
-      
-      return $scheme;
+        $parsedUri = parse_url($this->uri);
+        $scheme = "";
+        if (array_key_exists('scheme', $parsedUri)) {
+            $scheme = $parsedUri['scheme'];
+        }
+
+        return $scheme;
     }
 }

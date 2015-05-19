@@ -2,7 +2,7 @@
 
 namespace phmLabs\Base\Www\Html\Tag;
 
-use Base\Www\Html\Exception;
+use PhmLabs\Base\Www\Html\Exception;
 
 class Head implements Tag
 {

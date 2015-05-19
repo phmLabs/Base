@@ -9,7 +9,7 @@
 
 namespace phmLabs\Base\Www\Html;
 
-use Base\Www\Html\Document;
+use PhmLabs\Base\Www\Html\Document;
 
 /**
  * Interface for HTML validator implementations.

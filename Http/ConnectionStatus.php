@@ -2,8 +2,8 @@
 
 namespace phmLabs\Base\Http;
 
-use Base\Http\Request\Request;
-use Base\Http\Response\Response;
+use PhmLabs\Base\Http\Request\Request;
+use PhmLabs\Base\Http\Response\Response;
 
 class ConnectionStatus
 {

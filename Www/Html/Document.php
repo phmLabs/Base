@@ -2,10 +2,10 @@
 
 namespace phmLabs\Base\Www\Html;
 
-use Base\Www\Uri;
+use PhmLabs\Base\Www\Uri;
 
-use Base\Www\Html\Tag\Body;
-use Base\Www\Html\Tag\Head;
+use PhmLabs\Base\Www\Html\Tag\Body;
+use PhmLabs\Base\Www\Html\Tag\Head;
 
 class Document
 {
@@ -63,6 +63,19 @@ class Document
     public function getHtml()
     {
         return $this->content;
+    }
+
+    public function getReferencedUris()
+    {
+        $pattern = '/[^\'](?:<img|<a|<link|script).*(?:href|src)=["\']([\S]+\.[?\S]*)[\'"][^\']/iU';
+        preg_match_all($pattern, $this->content, $matches);
+
+        $uris = array();
+        foreach($matches[1] as $match ) {
+            $uris[] = new Uri($match);
+        }
+
+        return $uris;
     }
 
     public function getExternalDependencies($fileExtensions = array('css','js'), $uri = null)
