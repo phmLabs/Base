@@ -1,10 +1,21 @@
 {
- 	"package": {
-                "name": "phmLabs/Base",
-                "version": "1.0.0",
-                "source": {
-                    "url": "https://github.com/phmLabs/Base.git",
-                    "type": "git"
-                }
-	}
+    "name": "phmLabs/Base",
+    "type": "library",
+    "description": "phmLabs basic library",
+    "keywords": [],
+    "homepage": "https://www.thewebhatesme.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nils Langner",
+            "email": "nils.langner@phmlabs.comm"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "autoload": {
+        "psr-4": { "Base\\": "" }
+    },
+    "minimum-stability": "dev"
 }
