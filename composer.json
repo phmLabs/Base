@@ -5,8 +5,5 @@
     "description": "phmLabs basic library",
     "keywords": [],
     "homepage": "https://www.thewebhatesme.com",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": { "phmLabs\\Base\\": "" }
-    }
+    "license": "MIT"
 }
