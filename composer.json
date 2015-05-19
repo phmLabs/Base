@@ -8,6 +8,6 @@
     "license": "MIT",
     
     "autoload": {
-        "psr-0": { "Base\\": "" }
+        "psr-4": { "phmLabs\\Base\\": "" }
     }
 }
