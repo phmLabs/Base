@@ -41,11 +41,16 @@ class Uri
      */
     public static function isValid($uriString)
     {
-        if (strpos(strtolower($uriString), 'javascript:') === 0) {
-            return false;
-        } else {
-            return true;
+        $stopWords = array("android-app:", "javascrip:");
+
+        foreach($stopWords as $stopWord) {
+            if (strpos(strtolower($uriString), $stopWord) === 0) {
+                return false;
+            }
         }
+
+        return true;
+
 
         /**
          *
