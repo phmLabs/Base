@@ -72,7 +72,9 @@ class Document
 
         $uris = array();
         foreach($matches[1] as $match ) {
-            $uris[] = new Uri($match);
+            if( Uri::isValid($match)) {
+                $uris[] = new Uri($match);
+            }
         }
 
         return $uris;
