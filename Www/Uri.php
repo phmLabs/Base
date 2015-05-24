@@ -43,7 +43,7 @@ class Uri
     {
         if (strpos(strtolower($uriString), 'javascript:') === 0) {
             return false;
-        }else{
+        } else {
             return true;
         }
 
@@ -173,11 +173,12 @@ class Uri
 
     public function getTopLevelDomain()
     {
-        $url = @parse_url( $this->toString() );
-        if ( empty( $url['host'] ) ) return;
-        $parts = explode( '.', $url['host'] );
-        $slice = ( strlen( reset( array_slice( $parts, -2, 1 ) ) ) == 2 ) && ( count( $parts ) > 2 ) ? 3 : 2;
-        return implode( '.', array_slice( $parts, ( 0 - $slice ), $slice ) );
+        $url = @parse_url($this->toString());
+        if (empty($url['host'])) return;
+        $parts = explode('.', $url['host']);
+        $sliceable = array_slice($parts, -2, 1);
+        $slice = (strlen(reset($sliceable)) == 2) && (count($parts) > 2) ? 3 : 2;
+        return implode('.', array_slice($parts, (0 - $slice), $slice));
     }
 
     /**
@@ -215,7 +216,8 @@ class Uri
         return $scheme;
     }
 
-    public function isSameTopLevelDomain(Uri $uri) {
+    public function isSameTopLevelDomain(Uri $uri)
+    {
         return $this->getTopLevelDomain() == $uri->getTopLevelDomain();
     }
 }
