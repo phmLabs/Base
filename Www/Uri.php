@@ -32,7 +32,6 @@ class Uri
         return $this->uri;
     }
 
-
     /**
      * This static function returns true if a given string represents a valid
      * uri, otherwise false.
@@ -224,5 +223,10 @@ class Uri
     public function isSameTopLevelDomain(Uri $uri)
     {
         return $this->getTopLevelDomain() == $uri->getTopLevelDomain();
+    }
+
+    public function isSecure()
+    {
+        return strpos($this->uri, 'https') === 0;
     }
 }

@@ -80,7 +80,7 @@ class Document
         return $uris;
     }
 
-    public function getExternalDependencies($fileExtensions = array('css','js'), $uri = null)
+    public function getExternalDependencies($fileExtensions = array('css','js'), Uri $uri = null)
     {
         if (!is_array($fileExtensions)) return false;
         $extensions = implode('|', $fileExtensions);
@@ -89,6 +89,7 @@ class Document
         $matches = array();
         preg_match_all($pattern, $this->content, $matches);
 
+        $cleanFiles = array();
         $files = $matches[1];
 
         if (!is_null($uri)) {
@@ -99,8 +100,11 @@ class Document
                 $cleanFiles[] = $uri->concatUri($file);
             }
         } else {
-            $cleanFiles = $files;
+            foreach($files as $file ) {
+                $cleanFiles[] = new Uri($file);
+            }
         }
+
         return $cleanFiles;
     }
 }
