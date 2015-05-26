@@ -10,13 +10,7 @@ class Uri
 
     public function __construct($uriString)
     {
-        //$uriString = $this->checkCorrectUrl($uriString);
-        // @todo: http://www.example.com fails on validation with ParserTest.php
-        // and I
-        // cannot find any error in it. So: lets validate it by Symfony's
-        // Request-Object.
-        /*
-         * if (!self::isValid($uriString)) { throw new \Base\Www\Exception('The given string (' . $uriString . ') does
+        /* if (!self::isValid($uriString)) { throw new \Base\Www\Exception('The given string (' . $uriString . ') does
          * not represent a valid uri'); }
          */
         $this->uri = $uriString;
@@ -120,23 +114,6 @@ class Uri
     }
 
     /**
-     * @param unknown_type $uriString
-     */
-    private function checkCorrectUrl($uriString)
-    {
-        $uriString = trim($uriString);
-        $uriParts = parse_url($uriString);
-
-        if (key_exists('path', $uriParts)) {
-            $url = $uriString;
-        } else {
-            $url = $uriString . '/';
-        }
-
-        return $url;
-    }
-
-    /**
      * Concatenates two strings (uri terms). The most important job is the handling of
      * multiple slashes you dont need to care for. The first term could have a trailing
      * slash and / or the second term a leading slash. This method cares to use only
@@ -227,6 +204,6 @@ class Uri
 
     public function isSecure()
     {
-        return strpos($this->uri, 'https') === 0;
+        return !strpos($this->uri, 'http') === 0;
     }
 }

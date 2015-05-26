@@ -67,11 +67,13 @@ class Document
 
     public function getReferencedUris()
     {
-        $pattern = '/[^\'](?:<img|<a|<link|script).*(?:href|src)=["\']([\S]+\.[?\S]*)[\'"][^\']/iU';
+        // $pattern = '/[^\'](?:<img|<a|<link|script).*(?:href|src)=["\']([\S]+\.[?\S]*)[\'"][^\']/iU';
+        $pattern = '/(<img|<a|<link|script)(.*)(href|src)="(.*)"/iU';
+
         preg_match_all($pattern, $this->content, $matches);
 
         $uris = array();
-        foreach($matches[1] as $match ) {
+        foreach($matches[4] as $match ) {
             if( Uri::isValid($match)) {
                 $uris[] = new Uri($match);
             }
