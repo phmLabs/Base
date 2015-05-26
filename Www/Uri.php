@@ -40,9 +40,9 @@ class Uri
      */
     public static function isValid($uriString)
     {
-        $stopWords = array("android-app:", "javascrip:");
+        $stopWords = array("android-app:", "javascript:", "ftp:", 'mailto:');
 
-        foreach($stopWords as $stopWord) {
+        foreach ($stopWords as $stopWord) {
             if (strpos(strtolower($uriString), $stopWord) === 0) {
                 return false;
             }
@@ -113,7 +113,7 @@ class Uri
             $uri = $this->concatUriTerms($this->getDomain(), $uriString);
         } else {
             // uri string is relative to current path
-            $uri = $this->concatUriTerms($this->concatUriTerms($this->getDomain(), $this->getPath()), $uriString);
+            $uri = $this->concatUriTerms($this->getDomain(), $this->getPath()) . "/" . $uriString;
         }
 
         return new self($uri);
@@ -158,7 +158,7 @@ class Uri
         elseif (!empty($secondTerm)) {
             $result = $firstTerm . "/" . $secondTerm;
         } else {
-            $result = $firstTerm;
+            $result = (string)$firstTerm;
         }
 
         return $result;
@@ -200,7 +200,7 @@ class Uri
 
         }
 
-        return $this->uri;
+        return "";
     }
 
     /**
