@@ -34,7 +34,7 @@ class Uri
      */
     public static function isValid($uriString)
     {
-        $stopWords = array("android-app:", "javascript:", "ftp:", 'mailto:');
+        $stopWords = array("android-app:", "javascript:", "ftp:", 'mailto:', 'data:', "'");
 
         foreach ($stopWords as $stopWord) {
             if (strpos(strtolower($uriString), $stopWord) === 0) {

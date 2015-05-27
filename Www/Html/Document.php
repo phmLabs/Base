@@ -24,7 +24,7 @@ class Document
     }
 
     /**
-     * @return Base\Www\Html\Tag\Head
+     * @return PhmLabs\Base\Www\Html\Tag\Head
      */
     public function getHead()
     {
